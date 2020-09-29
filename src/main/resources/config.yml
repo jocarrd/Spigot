@@ -1,0 +1,12 @@
+Config:
+    mensaje-bienvenida: true
+    mensaje_bienvenida-texto: 
+    - Esto es una prueba de listas
+    - En los archivos de configuracion
+    - Probando
+Spawn:
+    x:
+    y:
+    z:
+    yaw:
+    pitch:
