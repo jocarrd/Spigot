@@ -26,9 +26,10 @@ public class MiPrimerPlugin extends JavaPlugin {
 				.sendMessage(ChatColor.BLUE + nombre + " " + "El plugin ha sido activado(version:" + version + ")");
 		Bukkit.getConsoleSender()
 				.sendMessage("---------------------------------------------------------------------------------");
+		this.registerConfig();
 		this.registrarComandos();
 		this.registrarEventos();
-		this.registerConfig();
+		
 	}
 
 	public void onDisable() {
@@ -42,7 +43,7 @@ public class MiPrimerPlugin extends JavaPlugin {
 	}
 
 	public void registrarComandos() {
-		this.getCommand("informacion").setExecutor(new comandoPrincipal(this));
+		this.getCommand("principal").setExecutor(new comandoPrincipal(this));
 	}
 
 	public void registrarEventos() {

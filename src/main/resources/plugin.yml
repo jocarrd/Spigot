@@ -1,7 +1,7 @@
 name: MiPrimerPlugin
 main: MiPrimerPlugin.MiPrimerPlugin
-version: 2
+version: 2 
 commands:
-  informacion:
+  principal:
     description: informacion.
     usage: "/informacion"

@@ -23,12 +23,13 @@ public class comandoPrincipal implements CommandExecutor {
 	}
 
 	public boolean onCommand(CommandSender sender, Command comando, String label, String[] arg3) {
+		
 		if (!(sender instanceof Player)) {
 			Bukkit.getConsoleSender().sendMessage(plugin.nombre + "No puedes ejecutar mensajes desde la consola");
 			return false;
 		} else {
 			Player jugador = (Player) sender;
-			jugador.sendMessage(ChatColor.YELLOW + "Bienvenido al servidor oficial ");
+			
 			if (arg3.length > 0) {
 
 				if (arg3[0].equalsIgnoreCase("setSpawn")) {
@@ -128,9 +129,13 @@ public class comandoPrincipal implements CommandExecutor {
 						}
 					}
 				}
+			}else {
+				jugador.sendMessage(ChatColor.LIGHT_PURPLE + "Comando incorrecto");
+				
 			}
-			return true;
+			
 		}
+		return true;
 	}
 
 }

@@ -24,8 +24,8 @@ public class spawnEntrar implements Listener {
 	public void entrar(PlayerJoinEvent event) {
 		Player jugador = event.getPlayer();
 		FileConfiguration config = plugin.getConfig();
-		Location location = new Location(jugador.getWorld(), 180, 180, 70, -90, 0);
-		jugador.teleport(location);
+		
+		if(config.contains(("Config.Spawn.x"))){
 
 		double x = Double.valueOf(config.getString("Config.Spawn.x"));
 		double y = Double.valueOf(config.getString("Config.Spawn.y"));
@@ -36,6 +36,8 @@ public class spawnEntrar implements Listener {
 
 		Location l = new Location(world, x, y, z, yaw, pitch);
 		jugador.teleport(l);
+		}
+		
 
 		String path = "Config.mensaje-bienvenida";
 
