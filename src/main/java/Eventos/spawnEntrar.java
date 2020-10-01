@@ -11,6 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import MiPrimerPlugin.MiPrimerPlugin;
+import net.md_5.bungee.api.ChatColor;
 
 public class spawnEntrar implements Listener {
 
@@ -44,8 +45,7 @@ public class spawnEntrar implements Listener {
 		if (config.getString(path).contentEquals("true")) {
 			List<String> mensaje = config.getStringList("Config.mensaje-bienvenida-texto");
 			for (String d : mensaje) {
-
-				jugador.sendMessage(d);
+				jugador.sendMessage(ChatColor.RED+d);
 			}
 
 		}

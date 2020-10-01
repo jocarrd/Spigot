@@ -1,9 +1,9 @@
 Config:
     mensaje-bienvenida: true
-    mensaje_bienvenida-texto: 
-    - Esto es una prueba de listas
-    - En los archivos de configuracion
-    - Probando
+    mensaje-bienvenida-texto: 
+    - "Bievenido a mi primer plugin "
+    - "Creado por Jorge Carrera Diez"
+    - "Disfrutalo"
 Spawn:
     x:
     y:
